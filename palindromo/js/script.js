@@ -8,10 +8,16 @@
 /* VARIABLES */
 const userWord = prompt('Inserisci una parola');
 const userWordIsAPalindrome = isAPalindrome(userWord);
+let userMessage;
 /* APPLICATIONS */
+if (userWordIsAPalindrome) {
+    userMessage = 'La tua parola è palindroma';
+} else {
+    userMessage = 'La tua parola non è palindroma';
+}
 /* OUTPUT */
 console.log('parole utente:', userWord);
-console.log(userWordIsAPalindrome);
+alert(userMessage);
 /* FUNCTIONS */
 // Funzione che definisce se una parola è palindroma
 // word: elemento stringa che rappresenta una parola
