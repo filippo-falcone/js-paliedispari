@@ -6,6 +6,27 @@
    // - Altrimenti no
 -------------------------------------------------------------------------------------- */
 /* VARIABLES */
+const userWord = prompt('Inserisci una parola');
+const userWordIsAPalindrome = isAPalindrome(userWord);
 /* APPLICATIONS */
 /* OUTPUT */
+console.log('parole utente:', userWord);
+console.log(userWordIsAPalindrome);
 /* FUNCTIONS */
+// Funzione che definisce se una parola è palindroma
+// word: elemento stringa che rappresenta una parola
+// return: un booleano in base se la parola è palindroma o no
+function isAPalindrome(word) {
+    let reverseWord = '';
+    let isAPalindrome;
+    for (let i = word.length - 1; i >= 0; i--) {
+        const thisLetter = word[i];
+        reverseWord += thisLetter;
+    }
+    if (reverseWord === word) {
+        isAPalindrome = true;
+    } else {
+        isAPalindrome = false;
+    }
+    return isAPalindrome;
+}
